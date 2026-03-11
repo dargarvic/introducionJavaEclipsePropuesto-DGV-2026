@@ -5,8 +5,17 @@ import java.util.Scanner;
 public class Ejercicio012 {
 	
 	//COMPLETAR METODO
-	public double sumarHastaCero() {
-		return 0.0;
+	public int sumarHastaCero() {
+		Scanner scanner = new java.util.Scanner(System.in);
+		int total = 0;
+		int numero;
+		do {
+			System.out.print("Ingresa un número: ");
+			numero = scanner.nextInt();
+			total = total + numero;
+		}while(numero != 0);
+		
+		return total;
     }
 	
 

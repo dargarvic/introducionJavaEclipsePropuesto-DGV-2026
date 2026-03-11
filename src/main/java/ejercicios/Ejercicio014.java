@@ -3,7 +3,18 @@ package ejercicios;
 public class Ejercicio014 {
 	//COMPLETAR METODO
 	public long calcularFactorial(int n) {
-        return 0;
+        int factorial = n;
+        int total_factorial = 1;
+        if(n == 0) {
+        	return 1;
+        }
+        if(n < 0) {
+        	throw new IllegalArgumentException("El factorial no se puede calcular para números negativos");
+        }
+		for(int contador = n-1; contador > 1; contador --) {
+        	factorial = factorial * contador;
+        }
+		return factorial;
     }
 
     public static void main(String[] args) {
