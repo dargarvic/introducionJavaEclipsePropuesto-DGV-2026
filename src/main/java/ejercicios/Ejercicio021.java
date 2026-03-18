@@ -4,7 +4,19 @@ public class Ejercicio021 {
 	
 	//COMPLETAR METODO
 	public int contarVocales(String texto) {
-        return 0;
+		if(texto == null) {
+			return 0;
+		}
+	    int contador = 0;
+	    String vocales = "aeiouAEIOU";
+
+	    for (int i = 0; i < texto.length(); i++) {
+	        if (vocales.contains(String.valueOf(texto.charAt(i)))) {
+	            contador++;
+	        }
+	    }
+
+	    return contador;
     }
 
     public static void main(String[] args) {
